@@ -13,11 +13,11 @@
       <h2><%= error %></h2>
     <% } %>
     <ul>
-      <% skills.forEach(function(todo) { %>
+      <% skills.forEach(function(skill) { %>
         <li>
-          <%= skills.text %>
+          <%= skill.text %>
             - 
-          <%= skills.mastered ? 'Mastered' : 'Not Mastered' %>
+          <%= skill.mastered ? 'Mastered' : 'Not Mastered' %>
         </li>
       <% }) %>
     </ul>

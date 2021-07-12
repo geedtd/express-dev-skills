@@ -7,7 +7,7 @@ const skills = [
   {text: 'CSS', mastered: true, _id: 124512},
   {text: 'JS', mastered: true, _id: 134513},
   {text: 'Express', mastered: true, _id: 134514},
-  {text: 'React', mastered: false, _id: 134515},
+  {text: 'React', mastered: false, _id: 134515}
 ]
 
 const find = (conditions, callback) => {
