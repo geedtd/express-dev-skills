@@ -3,18 +3,27 @@ import * as skillsDb from '../data/skill-db.js'
 export {
     index, 
     show,
-    newTodo as new,
-    
+    newSkill as new,
+    create,
+
 }
-function newTodo(req, res) {
-    res.render('todos/new')
+
+function create(req, res) {
+    skillsDb.create(req.body, function(error, skill) {
+        res.redirect('/skills')
+    })
+}
+
+function newSkill(req, res) {
+    res.render('skills/new')
 }
 
 function index(req, res) {
     skillsDb.find({}, function(error, skills) {
       res.render('skills/index', {
         skills: skills,
-        error: error
+        error: error,
+        time: req.time,
       })
     })
   }

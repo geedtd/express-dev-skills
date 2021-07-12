@@ -1,6 +1,7 @@
 export { 
 	find, 
-  findById
+  findById,
+  create,
 }
 
 const skills = [
@@ -10,6 +11,13 @@ const skills = [
   {text: 'Express', mastered: true, _id: 134514},
   {text: 'React', mastered: false, _id: 134515}
 ]
+
+function create(skill, callback) {
+  skill._id = Date.now() % 1000000
+  skill.done = false
+  skills.push(skill)
+  return callback(null, skill)
+}
 
 const find = (conditions, callback) => {
   // see if this works, if not, execute the code in the catch block
