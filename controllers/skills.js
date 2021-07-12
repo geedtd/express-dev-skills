@@ -5,8 +5,15 @@ export {
     show,
     newSkill as new,
     create,
+    deleteSkill as delete
 
 }
+
+function deleteSkill(req, res) {
+    skillsDb.findByIdAndDelete(req.params.id, function(error, todo) {
+      res.redirect('/skills')
+    })
+  }
 
 function create(req, res) {
     skillsDb.create(req.body, function(error, skill) {
