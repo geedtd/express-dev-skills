@@ -3,11 +3,11 @@ export {
 }
 
 const skills = [
-  {text: 'HTML', done: true, _id: 124511},
-  {text: 'CSS', done: true, _id: 124512},
-  {text: 'JS', done: true, _id: 134513},
-  {text: 'Express', done: true, _id: 134514},
-  {text: 'React', done: false, _id: 134515},
+  {text: 'HTML', mastered: true, _id: 124511},
+  {text: 'CSS', mastered: true, _id: 124512},
+  {text: 'JS', mastered: true, _id: 134513},
+  {text: 'Express', mastered: true, _id: 134514},
+  {text: 'React', mastered: false, _id: 134515},
 ]
 
 const find = (conditions, callback) => {
