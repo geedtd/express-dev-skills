@@ -1,0 +1,11 @@
+<body>
+	<h1>Skills</h1>
+  <% if(error) { %>
+    <h2><%= error %></h2>
+  <% } else { %>
+    <h2>Skill #<%= skills._id %></h1>
+    <h3><%= skills.text %></h3>
+    <p>Mastered: <%= skills.mastered ? 'Yes' : 'No' %></p>
+  <% } %>
+	<a href="/skills">Go back</a>
+</body>

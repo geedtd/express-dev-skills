@@ -1,5 +1,6 @@
 export { 
-	find
+	find, 
+  findById
 }
 
 const skills = [
@@ -23,5 +24,16 @@ const find = (conditions, callback) => {
   } catch (error) {
     console.log(error)
     callback(error, [])
+  }
+}
+
+const findById = (id, callback) =>{
+  try {
+    const skill = skills.find(skill => skill._id === parseInt(id))
+    if (!skill) throw new Error ('No todo was found')
+    return callback(null, skill)
+  } catch (error) {
+    console.log(error)
+    return callback(error, null)
   }
 }
