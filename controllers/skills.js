@@ -2,7 +2,12 @@ import * as skillsDb from '../data/skill-db.js'
 
 export {
     index, 
-    show
+    show,
+    newTodo as new,
+    
+}
+function newTodo(req, res) {
+    res.render('todos/new')
 }
 
 function index(req, res) {
