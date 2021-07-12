@@ -6,7 +6,7 @@ import cookieParser from 'cookie-parser'
 import logger from 'morgan'
 
 import { router as indexRouter } from './routes/index.js'
-import { router as skillsRouter } from './routes/users.js'
+import { router as skillsRouter } from './routes/skills.js'
 
 const app = express()
 
